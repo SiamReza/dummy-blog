@@ -1,0 +1,42 @@
+@keyframes fadeInOut {
+
+  0%,
+  100% {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  50% {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.animated-text .text-slide {
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.animated-text .text-slide::before {
+  content: '';
+  animation: fadeInOut 15s infinite;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.animated-text .text-slide:nth-child(1)::before {
+  animation-delay: 0s;
+}
+
+.animated-text .text-slide:nth-child(2)::before {
+  animation-delay: 2.5s;
+}
