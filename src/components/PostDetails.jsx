@@ -107,10 +107,11 @@ const PostDetails = ({ postId }) => {
   };
 
   return (
+    <Box sx={{ px: 4 }}>
     <Box
       sx={{
         maxWidth: 600,
-        mx: 4,
+        mx: "auto",
         my: 4,
         p: 3,
         borderRadius: 4,
@@ -214,6 +215,7 @@ const PostDetails = ({ postId }) => {
           {snackbarMessage}
         </MuiAlert>
       </Snackbar>
+    </Box>
     </Box>
   );
 };

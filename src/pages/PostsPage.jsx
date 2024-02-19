@@ -40,6 +40,7 @@ const PostPage = () => {
 
   const handleChangePage = (event, value) => {
     setCurrentPage(value);
+    window.scrollTo(0, 0);
   };
 
   if (isLoading) {

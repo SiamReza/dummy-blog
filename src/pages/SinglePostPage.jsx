@@ -7,11 +7,15 @@ import { getSinglePost } from "../api/ApiRequests";
 import PostComments from "../components/PostComments";
 import Loading from "../components/Loading";
 import Footer from "../components/Footer";
+import { useMediaQuery } from '@mui/material';
+
 
 const SinglePostPage = () => {
   const { postId } = useParams();
   const [post, setPost] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+
+  const matches = useMediaQuery(theme => theme.breakpoints.up('md'));
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -42,9 +46,11 @@ const SinglePostPage = () => {
           <PostDetails postId={postId} />
           <PostComments postId={postId} />
         </Grid>
-        <Grid item xs={12} md={4}>
-          <RelatedPosts tags={post.tags} />
-        </Grid>
+        {matches && (
+          <Grid item xs={12} md={4}>
+            <RelatedPosts tags={post.tags} />
+          </Grid>
+        )}
       </Grid>
       <Footer />
     </>
