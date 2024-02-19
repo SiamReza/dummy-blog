@@ -110,7 +110,7 @@ const PostDetails = ({ postId }) => {
     <Box
       sx={{
         maxWidth: 600,
-        mx: "auto",
+        mx: 4,
         my: 4,
         p: 3,
         borderRadius: 4,
