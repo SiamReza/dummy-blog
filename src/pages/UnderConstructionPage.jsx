@@ -30,7 +30,7 @@ const UnderConstructionPage = () => {
           Site Under Construction
         </Typography>
         <Typography variant="subtitle1" sx={{ mt: 2 }}>
-          We'll be back soon!
+          It'll be back soon!
         </Typography>
       </Container>
       <Footer />

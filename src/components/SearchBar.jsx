@@ -1,43 +1,3 @@
-// import React, { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
-// import { Box, TextField, IconButton, InputAdornment } from '@mui/material';
-// import SearchIcon from '@mui/icons-material/Search';
-
-// const SearchBar = () => {
-//     const [query, setQuery] = useState('');
-//     const navigate = useNavigate();
-
-//     const handleSearch = (event) => {
-//         event.preventDefault(); // Prevent form submission from reloading the page
-//         if (query.trim() !== '') {
-//             navigate(`/searchResults?query=${encodeURIComponent(query.trim())}`);
-//         }
-//     };
-
-//     return (
-//         <Box component="form" onSubmit={handleSearch} sx={{ display: 'flex', justifyContent: 'center', m: 2 }}>
-//             <TextField
-//                 variant="outlined"
-//                 placeholder="Search posts..."
-//                 value={query}
-//                 onChange={(e) => setQuery(e.target.value)}
-//                 InputProps={{
-//                     endAdornment: (
-//                         <InputAdornment position="end">
-//                             <IconButton type="submit" aria-label="search">
-//                                 <SearchIcon />
-//                             </IconButton>
-//                         </InputAdornment>
-//                     ),
-//                 }}
-//                 sx={{ width: '80%', maxWidth: '500px' }} // Adjust based on your layout needs
-//             />
-//         </Box>
-//     );
-// };
-
-// export default SearchBar;
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
@@ -107,7 +67,7 @@ const SearchBar = () => {
         <TextField
           fullWidth
           variant="outlined"
-          placeholder="Search posts by tag..."
+          placeholder="Search posts..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           InputProps={{
