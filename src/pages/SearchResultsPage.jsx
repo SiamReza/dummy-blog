@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Box, Typography, Paper, ButtonBase } from "@mui/material";
-import { searchPosts } from "../api/ApiRequests"; // Adjust import paths as necessary
+import { searchPosts } from "../api/ApiRequests";
 import SearchBar from "../components/SearchBar";
 import Loading from "../components/Loading";
 import Navbar from "../components/NavBar";
